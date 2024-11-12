@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (bookmarkIndex !== null) {
         const bookmark = JSON.parse(localStorage.getItem('bookmarks'))[bookmarkIndex];
         
-        // Populate the input fields with the bookmark data
+
         document.getElementById("editName").value = bookmark.name;
         document.getElementById("editUrl").value = bookmark.url;
 
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 bookmarks[bookmarkIndex] = { name: updatedName, url: updatedUrl };
                 localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
 
-                // Redirect back to the main page
+               
                 window.location.href = "index.html";
             } else {
                 alert("Please fill in both fields.");
