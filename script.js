@@ -1,4 +1,4 @@
-// Fetch stored bookmarks from localStorage (or initialize as empty array if no data)
+
 let bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
 
 document.getElementById("addButton").addEventListener("click", function() {
@@ -17,7 +17,7 @@ document.getElementById("addButton").addEventListener("click", function() {
     }
 });
 
-// Render the list of bookmarks
+//  the list of bookmarks
 function renderBookmarks() {
     const bookmarkList = document.getElementById("bookmarkList");
     bookmarkList.innerHTML = '';  // Clear the list
